@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Raw Link Copier",
+  "version": "1.0",
+  "description": "一键复制 GitHub 文件的 raw 链接",
+  "permissions": ["clipboardWrite", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
